@@ -4,6 +4,17 @@
  border-radius: 50%;
 }
 
+body{
+    background: url('/images/pic2.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
+.mySlides {
+    display: none;
+    height: 400px;
+    width: 650px;
+}
+
 #bg{
     padding: 0;
     display: block;
@@ -30,10 +41,15 @@
   width: 650px;
 }
 
-#sections{
-
+#box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-#greeting-container {
-  margin-top: 20px;
+#box2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+
