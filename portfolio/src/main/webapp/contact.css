@@ -1,18 +1,11 @@
 body{
     background: url('/images/backgroundPic.jpg') no-repeat center fixed;
     background-size: cover;
-    overflow-y: auto;
 }
 
 #container{
     position:relative;
     text-align: center;
-}
-
-.mySlides {
-    display: none;
-    height: 400px;
-    width: 650px;
 }
 
 
