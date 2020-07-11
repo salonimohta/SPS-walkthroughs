@@ -1,0 +1,45 @@
+body{
+    background: url('/images/backgroundPic.jpg') no-repeat center fixed;
+    background-size: cover;
+    overflow-y: auto;
+}
+
+#container{
+    position:relative;
+    text-align: center;
+}
+
+.mySlides {
+    display: none;
+    height: 400px;
+    width: 650px;
+}
+
+.accomplishmentCards{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.projectBox{
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 1px #e6eeff;
+    background-color: #e6eeff;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+}
+
