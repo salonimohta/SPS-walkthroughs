@@ -12,11 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
+/*
+Functions to display picture gallery as a carousel
  */
-var slideIndex = 1;
-showDivs(slideIndex);
+
+var slideIndex=1;
+showDivs(slideIndex)
 
 function plusDivs(n) {
   showDivs(slideIndex += n);
