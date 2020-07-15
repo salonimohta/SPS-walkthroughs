@@ -40,3 +40,12 @@ body{
     justify-content: space-around;
 }
 
+#message{
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 1px #e6eeff;
+    background-color: #e6eeff;
+}
+

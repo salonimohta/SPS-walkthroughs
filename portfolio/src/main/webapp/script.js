@@ -33,3 +33,8 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
+function sendMessage(){
+    fetch('/data').then(response=>response.text()).then((message)=>{
+        document.getElementById('message').innerText=message;
+    })
+}
