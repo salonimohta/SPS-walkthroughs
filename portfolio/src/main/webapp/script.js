@@ -33,8 +33,22 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
-function sendMessage(){
-    fetch('/data').then(response=>response.text()).then((message)=>{
-        document.getElementById('message').innerText=message;
+function receiveComments(){
+    fetch('/data').then(response=>response.json()).then((comments)=>{
+        const commentListElement = document.getElementById('message');
+    commentListElement.innerHTML = '';
+    commentListElement.appendChild(
+        createListElement(comments[0].Name+': ' + comments[0].Message));
+    commentListElement.appendChild(
+        createListElement(comments[1].Name+': ' + comments[1].Message));
+    commentListElement.appendChild(
+        createListElement(comments[2].Name+': ' + comments[2].Message));
     })
 }
+
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
