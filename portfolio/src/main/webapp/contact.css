@@ -1,0 +1,27 @@
+body{
+    background: url('/images/backgroundPic.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
+#container{
+    position:relative;
+    text-align: center;
+}
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#contentCard {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+    padding: 10px;
+    border: 1px #e6eeff;
+    background-color: #e6eeff;
+}
+

@@ -1,0 +1,33 @@
+body{
+    background: url('/images/backgroundPic.jpg') no-repeat center fixed;
+    background-size: cover;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#container{
+    position:relative;
+    text-align: center;
+}
+
+.mySlides {
+    display: none;
+    height: 400px;
+    width: 650px;
+}
+
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+}
+
+.aboutCard{
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 1px #e6eeff;
+    background-color: #e6eeff;
+}
+
