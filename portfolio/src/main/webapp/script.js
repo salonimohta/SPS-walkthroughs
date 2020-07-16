@@ -34,7 +34,7 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
 }
 function receiveComments(){
-    fetch('/add-comment').then(response=>response.json()).then((comments)=>{
+    fetch('/data').then(response=>response.json()).then((comments)=>{
         const commentListElement = document.getElementById('message');
     commentListElement.innerHTML = '';
         comments.forEach((comment)=>{
