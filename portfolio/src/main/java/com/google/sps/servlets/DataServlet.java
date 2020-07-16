@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
-@WebServlet("/data")
+@WebServlet("/add-comment")
 public class DataServlet extends HttpServlet {
   
     public class comment{
@@ -50,6 +50,17 @@ public class DataServlet extends HttpServlet {
     String json=convertJsonwithGson(comments);
     response.setContentType("application/json;");
     response.getWriter().println(json);
+  }
+   @Override
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+    // Get the input from the form.
+    String username = request.getParameter("username");
+    String message= request.getParameter("message");
+    comments.add(new comment(username,message));
+
+    // Redirect back to the HTML page.
+    response.sendRedirect("/index.html");
   }
 
     private String convertJsonwithGson(ArrayList<comment> comments) {

@@ -34,15 +34,13 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
 }
 function receiveComments(){
-    fetch('/data').then(response=>response.json()).then((comments)=>{
+    fetch('/add-comment').then(response=>response.json()).then((comments)=>{
         const commentListElement = document.getElementById('message');
     commentListElement.innerHTML = '';
-    commentListElement.appendChild(
-        createListElement(comments[0].Name+': ' + comments[0].Message));
-    commentListElement.appendChild(
-        createListElement(comments[1].Name+': ' + comments[1].Message));
-    commentListElement.appendChild(
-        createListElement(comments[2].Name+': ' + comments[2].Message));
+        comments.forEach((comment)=>{
+            commentListElement.appendChild(
+            createListElement(comment.Name+': ' + comment.Message));
+        })
     })
 }
 
