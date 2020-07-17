@@ -50,3 +50,14 @@ function createListElement(text) {
   return liElement;
 }
 
+function checkLogin(){
+    fetch('/login-status').then(response=>response.text()).then((loginStatus)=>{
+        if (loginStatus.valueOf===new String("logged in").valueOf){
+            document.getElementById("commentForm").style.display="block";
+        }
+        else{
+            document.getElementById("loginCheck").innerHTML=loginStatus;
+        }
+    })
+}
+
