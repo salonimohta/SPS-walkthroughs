@@ -30,11 +30,12 @@ public class GetCommentServlet extends HttpServlet {
     List<Comment> comments = new ArrayList<>();
     for (Entity entity : results.asIterable()) {
       long id = entity.getKey().getId();
+      String email= (String) entity.getProperty("Email");
       String name = (String) entity.getProperty("Name");
       String message = (String) entity.getProperty("Message");
       long timestamp = (long) entity.getProperty("Timestamp");
 
-      Comment comment = new Comment(id, name, message, timestamp);
+      Comment comment = new Comment(id,email, name, message, timestamp);
       comments.add(comment);
     }
 

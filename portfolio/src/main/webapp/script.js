@@ -39,7 +39,7 @@ function receiveComments(){
     commentListElement.innerHTML = '';
         comments.forEach((comment)=>{
             commentListElement.appendChild(
-            createListElement(comment.Name+': ' + comment.Message));
+            createListElement(comment.Name+' of '+comment.Email+' says: ' + comment.Message));
         })
     })
 }
