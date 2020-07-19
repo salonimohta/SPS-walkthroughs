@@ -5,8 +5,10 @@
     <title>Saloni Mohta</title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" href="/images/saloni.jpg">
+    <script src="script.js">
+    </script>
   </head>
-  <body>
+  <body onload="checkLogin()">
       <div class="container">
     <div id="content" class="centered">
       <h1 style="margin-left:200px">Saloni's Portfolio</h1>
@@ -26,6 +28,20 @@
           <a href="/about.html"><h2 style="color:white;">About Me</h2></a>
           <a href="/accomplishment.html"><h2 style="color:white;">My Accomplishments</h2></a>
           <a href="/contact.html"><h2 style="color:white;">Contact Me</h2></a>
+      </div>
+      <div>
+          <button onclick="receiveComments()">View some comments!</button>
+          <ul id="message"></ul>
+          <h3 style="color:white;">Add a comment!</h3>
+          <div id="loginCheck" style="color:white;"></div>
+          <div id="commentForm" style="display:none;">
+          <form action="/add-comment" method="POST">
+          <p>Name: <input type="text" name="username"></p>
+          <p>Comment: <input type="text" name="message"></p>
+          <br/>
+          <input type="submit" />
+          </form>
+          </div>
       </div>
     </div>
     </div>

@@ -33,3 +33,31 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
+function receiveComments(){
+    fetch('/get-comment').then(response=>response.json()).then((comments)=>{
+        const commentListElement = document.getElementById('message');
+    commentListElement.innerHTML = '';
+        comments.forEach((comment)=>{
+            commentListElement.appendChild(
+            createListElement(comment.Name+' of '+comment.Email+' says: ' + comment.Message));
+        })
+    })
+}
+
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
+function checkLogin(){
+    fetch('/login-status').then(response=>response.text()).then((loginStatus)=>{
+        if (loginStatus.valueOf===new String("logged in").valueOf){
+            document.getElementById("commentForm").style.display="block";
+        }
+        else{
+            document.getElementById("loginCheck").innerHTML=loginStatus;
+        }
+    })
+}
+
